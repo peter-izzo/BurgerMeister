@@ -1,0 +1,28 @@
+{
+  "name": "burgermeister",
+  "version": "1.0.0",
+  "description": "A burger logger app created using MySQL, Node, Express, Handlebars and an ORM",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peter-izzo/BurgerMeister.git"
+  },
+  "author": "Pete Izzo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peter-izzo/BurgerMeister/issues"
+  },
+  "homepage": "https://github.com/peter-izzo/BurgerMeister#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "express-session": "^1.17.1",
+    "mysql": "^2.18.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  }
+}
