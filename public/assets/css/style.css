@@ -101,3 +101,8 @@ img {
     margin-right: auto;
     z-index: 2;
 }
+
+/*
+I couldn't figure out how to split the screen into thirds. 
+As it stand the burgers still change columns (from eaten to uneaten)
+*/
