@@ -1,9 +1,9 @@
-<li>
-  {{name}}
+<div class="da-burga">
+  <p class="name">{{name}}</p>
 
-  <button class="change-eaten" data-id="{{id}}" data-neweaten="{{eaten}}">
-    {{#if eaten}}OMNOMNOMNOM!{{else}}NOT EATEN!{{/if}}
+  <button class="button change-eaten" data-id="{{id}}" data-neweaten="{{eaten}}">
+    {{#if eaten}}OMNOMNOMNOM!{{else}}UNEAT!!(...ew){{/if}}
   </button>
 
-  <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
-</li>
+  <button class="button delete-burger" data-id="{{this.id}}">DELETE!</button>
+</div>

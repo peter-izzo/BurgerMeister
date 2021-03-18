@@ -1,38 +1,85 @@
-<h1>Burgers!</h1>
+<main>
+    <div class="container">
 
-<h2>These burger's haven't been eaten!!!</h2>
+        <h1>Burgers!</h1>
+            <img src="assets/images/juicy_burger.png" class="responsive-image" alt="juicy burger">
+        <div class="flex-row" id="newBurger">
+            <button type="button" id="addBurgerBtn" class="button" data-toggle="modal" data-target="#newBurgerModal">
+                Add Burger
+            </button>
+        </div>
 
-<ul>
-    {{#each burgers}}
-    {{#unless eaten}}
-    {{> burger-partial/burger eaten=true}}
-    {{/unless}}
-    {{/each}}
-</ul>
+        <div class="flex-row">
 
-<h2>Burgers have been eaten!</h2>
+            <div class="flex-small one-third">
+                <h2 class="noteaten">These burgers haven't been eaten!!!</h2>
 
-<ul>
-    {{#each burgers}}
-    {{#if eaten}}
-    {{> burger-partial/burger eaten=false}}
-    {{/if}}
-    {{/each}}
-</ul>
+                <div>
+                    {{#each burgers}}
+                    {{#unless eaten}}
+                    {{> burger-partial/burger eaten=true}}
+                    {{/unless}}
+                    {{/each}}
+                </div>
+                
+            </div>
 
-<h2>Add a Burger</h2>
-<form id="create-form">
+            <div class="flex-small one-third">
+                <img src="assets/images/homer.png" class="responsive-image" alt="homer simpson">
+            </div>
 
-    <div class="form-group">
-        <label for="bu">Burger Name:</label>
-        <input type="text" id="bu" name="name">
+            <div class="flex-small one-third">
+                <h2 class="eaten">These burgers have been eaten</h2>
+
+                <div>
+                    {{#each burgers}}
+                    {{#if eaten}}
+                    {{> burger-partial/burger eaten=false}}
+                    {{/if}}
+                    {{/each}}
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="modal fade" id="newBurgerModal" tabindex="-1" role="dialog">
+
+            <div class="modal-dialog modal-dialog-centered" role="document">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add A New Burger</h5>
+                        <button type="button" class="button close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <form id="create-form">
+                            <div class="form-group">
+                                <label for="bu">Burger Name:</label>
+                                <input type="text" id="bu" name="name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="eaten">Has this burger been eaten?</label>
+                                <input type="radio" name="eaten" value="1" id="eaten" checked> Eaten<br>
+                                <input type="radio" name="eaten" value="0" id="noteaten"> Not Eaten
+                            </div>
+                            
+                            <div class="modal-footer">
+                                <button type="submit" class="button">Add</button>
+                                <button type="button" class="button" data-dismiss="modal">Close</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-
-    <div class="form-group">
-        <label for="eaten">eaten?</label><br>
-        <input type="radio" name="eaten" value="1" id="eaten" checked> eaten!<br>
-        <input type="radio" name="eaten" value="0" id="noteaten"> Not eaten
-    </div>
-
-    <button type="submit">Add Burger</button>
-</form>
+</main>
