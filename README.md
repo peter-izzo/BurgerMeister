@@ -45,8 +45,8 @@ No tests for this project
 
 ### Screenshot of Running App
 
-![half of page](./assets/app.png)
-![bottom half](./assets/app2.png)
+![half of page](./public/assets/images/app.png)
+![bottom half](./public/assets/images/app2.png)
 
 ## Questions :question:
 ### For any issues please reach out to Peter Izzo
